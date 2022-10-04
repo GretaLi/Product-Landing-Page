@@ -54,6 +54,12 @@
   }
 }
 
+@mixin xl {
+  @media (min-width: 1921px) {
+    @content;
+  }
+}
+
 // CSS variables
 :root {
   --clr-primary: 0, 0%, 20%;
@@ -89,6 +95,7 @@
 
 html {
   scroll-behavior: smooth;
+  color: #ffffffca;
 }
 
 body {
@@ -385,6 +392,10 @@ li {
       display: block;
     }
   }
+
+  @include xl {
+    padding-left: 20%;
+  }
 }
 
 .navbar-bg {
@@ -394,6 +405,10 @@ li {
 
   @include sm {
     background: hsl(var(--clr-white), 0.8);
+  }
+
+  @include xl {
+    padding-left: 20%;
   }
 }
 
@@ -559,9 +574,14 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     @include md {
       padding-inline: 6rem;
+      align-items: center;
+    }
+
+    @include lg {
+      align-items: stretch;
     }
   }
   .title {
@@ -1042,4 +1062,9 @@ footer p {
   padding: 0.5rem 0;
   text-align: center;
   font-size: 11px;
+}
+
+// Simplybook Widget
+.sb-widget-iframe {
+  border-radius: 10px;
 }
