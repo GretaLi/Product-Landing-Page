@@ -148,6 +148,12 @@ li {
   }
 }
 
+.btn-s {
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-300);
+  font-weight: 400;
+}
+
 .btn:hover {
   transition: all 0.5s ease;
 }
@@ -615,6 +621,8 @@ section {
   display: block;
 }
 .service-text h4 {
+  position: relative;
+  z-index: 2;
   font-family: var(--ff-serif);
   padding-right: 2rem;
 }
